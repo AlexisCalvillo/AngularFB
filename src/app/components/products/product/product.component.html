@@ -1,0 +1,62 @@
+<div class="card mt-5" >
+    <div class="card-body">
+        <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+            <div class="form-group" [hidden]=!productService.selectedProduct.$key>
+                Editando
+                <input type="text" 
+                name="$key"  
+                [(ngModel)]="productService.selectedProduct.$key" 
+                >
+            </div>
+            <div class="form-group">
+                <input type="text" 
+                class="form-control"
+                name="nombre" 
+                #name="ngModel" 
+                [(ngModel)]="productService.selectedProduct.name"
+                placeholder="Agrega nombre de producto"
+                >
+            </div>
+            <div class="form-group">
+                <input type="text" 
+                class="form-control"
+                name="categoria" 
+                #name="ngModel" 
+                [(ngModel)]="productService.selectedProduct.categoria"
+                placeholder="Agrega categoria de producto"
+                >
+            </div>
+            <div class="form-group">
+                <input type="text" 
+                class="form-control"
+                name="ubicacion" 
+                #name="ngModel" 
+                [(ngModel)]="productService.selectedProduct.ubicacion"
+                placeholder="Agrega ubicacion de producto"
+                >
+            
+            </div>
+            <div class="form-group">
+                <input type="text" 
+                class="form-control"
+                name="precio" 
+                #name="ngModel" 
+                [(ngModel)]="productService.selectedProduct.precio"
+                placeholder="Agrega precio a producto"
+                >
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+                <button class=" btn btn-secondary" type="reset" (click)="resetForm(productForm)">
+                    <i class="fas fa-sync-alt"></i>Reset
+                </button>
+                <button class=" btn btn-secondary" type="button" (click)=actualiza(productForm) [disabled]="!productService.selectedProduct.$key" >
+                    Actualiza
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>

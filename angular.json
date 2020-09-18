@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularFB"
+    }
+  },
+  "defaultProject": "AngularFB",
+  "cli": {
+    "analytics": "76c44066-3032-441c-8b0f-3e44acb9c4c2"
+  }
 }

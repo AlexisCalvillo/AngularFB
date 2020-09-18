@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  //Configuración de FB en el proyecto.
+  firebase: {
+    apiKey: "AIzaSyDl8qwZFy0VAVz8o5IjiYLw6GN2gOoaJc0",
+    authDomain: "angularfb-16b9a.firebaseapp.com",
+    databaseURL: "https://angularfb-16b9a.firebaseio.com",
+    projectId: "angularfb-16b9a",
+    storageBucket: "angularfb-16b9a.appspot.com",
+    messagingSenderId: "530727095696",
+    appId: "1:530727095696:web:d0332d3b8780bbef95f715",
+    measurementId: "G-TJSCX1ND73"
+  }
 };
 
 /*
